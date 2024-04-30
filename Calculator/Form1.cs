@@ -24,7 +24,7 @@ namespace Calculator
         double num1;
         double num2;
         string operation;
-        private string lastInput = "";
+        string lastInput;
         double result;
 
         private void button2_Click(object sender, EventArgs e)
