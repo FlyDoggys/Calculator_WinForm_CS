@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,10 +20,10 @@ namespace Calculator
             this.MaximizeBox = false;
         }
 
-        string CalcTotal;
+        string Calc;
         double num1;
         double num2;
-        string option;
+        string operation;
         private string lastInput = "";
         double result;
 
@@ -49,7 +49,7 @@ namespace Calculator
 
         private void button11_Click(object sender, EventArgs e)
         {
-            option = "+";
+            operation = "+";
             num1 = double.Parse(txtDisplay.Text, CultureInfo.InvariantCulture);
 
             txtDisplay.Clear();
@@ -84,21 +84,21 @@ namespace Calculator
         {
             num2 = double.Parse(txtDisplay.Text, CultureInfo.InvariantCulture);
 
-            if (option != null)
+            if (operation != null)
             {
-                if (option.Equals("+"))
+                if (operation.Equals("+"))
                 {
                     result = num1 + num2;
                 }
-                if (option.Equals("-"))
+                if (operation.Equals("-"))
                 {
                     result = num1 - num2;
                 }
-                if (option.Equals("*"))
+                if (operation.Equals("*"))
                 {
                     result = num1 * num2;
                 }
-                if (option.Equals("/"))
+                if (operation.Equals("/"))
                 {
                     result = num1 / num2;
                 }
@@ -130,7 +130,7 @@ namespace Calculator
 
         private void btnMin_Click(object sender, EventArgs e)
         {
-            option = "-";
+            operation = "-";
             num1 = double.Parse(txtDisplay.Text, CultureInfo.InvariantCulture);
 
             txtDisplay.Clear();
@@ -138,7 +138,7 @@ namespace Calculator
 
         private void btnMul_Click(object sender, EventArgs e)
         {
-            option = "*";
+            operation = "*";
             num1 = double.Parse(txtDisplay.Text, CultureInfo.InvariantCulture);
 
             txtDisplay.Clear();
@@ -146,7 +146,7 @@ namespace Calculator
 
         private void btnDiv_Click(object sender, EventArgs e)
         {
-            option = "/";
+            operation = "/";
             num1 = double.Parse(txtDisplay.Text, CultureInfo.InvariantCulture);
 
             txtDisplay.Clear();
